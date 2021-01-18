@@ -30,7 +30,8 @@ class ProductsController extends Controller
     {
     	Products::create([
     		"title"=>$request->input('title'),
-    		"description"=>$request->input('description')
+    		"description"=>$request->input('description'),
+            "price"=>$request->input('price')
     	]);
     	return redirect()->route("Adminindex");
     }
@@ -46,7 +47,9 @@ class ProductsController extends Controller
     {
         Products::where("id",$request->input("id"))->update([
             "title"=>$request->input('title'),
-            "description"=>$request->input('description')
+            "description"=>$request->input('description'),
+            "price"=>$request->input('price')
+
         ]);
         return redirect()->route("Adminindex");
     }
@@ -61,7 +64,9 @@ class ProductsController extends Controller
     {
         Comments::create([
             "comments"=>$request->input("comments"),
-            "product_id"=>$request->input("id")
+            "product_id"=>$request->input("id"),
+            "price"=>$request->input('price')
+
         ]);
     }
 }

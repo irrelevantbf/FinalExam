@@ -7,9 +7,21 @@
 <body>
 	<form action="{{ route('adminstore') }}" method="POST">
 		@csrf
-		<input type="text" name="title" class="form-control" placeholder="პროდუქტი">
-		<textarea name="description" class="form-control" placeholder="პროდუქტის აღწერა"></textarea>
-		<button class="btn btn-primary">დამატება</button>
+
+		<input type="text" name="title" class="form-control" placeholder="პროდუქტი ₾" style="margin: 15px; width: 500px;">
+		<input type="numbers" name="price" class="form-control" placeholder="ფასი ₾" style="margin: 15px; width: 500px;">
+		<textarea name="description" class="form-control" placeholder="პროდუქტის აღწერა" style="margin: 15px"></textarea>
+
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+  ფოტოს დამატება:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <button class="btn btn-primary">დამატება</button>
+
+</form>
+
+
+
+
 		
 	</form>
 

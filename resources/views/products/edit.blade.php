@@ -4,13 +4,14 @@
 	<title></title>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
-<body>
+<body style="margin: 15px;">
 	<form action="{{ route('update') }}" method="POST">
 		@csrf
 		<input type="hidden" name="id" value="{{ $result->id }}">
 
 		<input type="text" name="title" class="form-control" placeholder="title" value="{{ $result->title }}" />
 		<textarea name="description" class="form-control" placeholder="short description">{{ $result->description }}</textarea>
+		<textarea type="number" id="price" name="price" placeholder="ფასი" style="width: 100px; height: 40px;">{{ $result->price }}</textarea>
 		<input type="checkbox" id="in_stock" name="in_stock1" value="in_stock">
 		<label for="in_stock">მარაგში</label><br>
 

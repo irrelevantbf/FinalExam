@@ -12,6 +12,8 @@
 
 				<div class="card-title"> <b>პროდუქტი:</b> {{ $result->title }} </div>
 				<div class="card-text"> <b>პროდუქტის აღწერა:</b> {{ $result->description }}</div>
+				<div class="card-price"> <b>პროდუქტის ფასი:</b> {{ $result->price }}</div>
+
 				<input type="checkbox" id="in_stock" name="in_stock1" value="in_stock">
 				<label for="in_stock">მარაგში</label><br>
 

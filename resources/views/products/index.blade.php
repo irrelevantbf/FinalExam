@@ -10,6 +10,7 @@
 			<tr>
 			<td>#</td>
 			<td>პროდუქტი</td>
+			<td>ფასი</td>
 			<td>პროდუქტის აღწერა</td>
 			<td>მარაგში</td>
 			<td>მოქმედება</td>
@@ -20,6 +21,7 @@
 			<tr>
 				<td>{{ ++$loop->index }}</td>
 				<td>{{ $element->title }}</td>
+				<td>{{ $element->price }}</td>
 				<td>{{ $element->description }}</td>
 				<td><input type="checkbox" id="in_stock" name="in_stock1" value="in_stock"></td>
 				<td>
